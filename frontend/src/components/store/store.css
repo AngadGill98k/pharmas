@@ -1,0 +1,17 @@
+.conatiner{
+    background-color:#fff7e2 ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20%;
+    
+}
+.cat{
+    margin-right: 5%;
+    text-align: center;
+    
+}
+.categories{
+    display: flex;
+   
+}

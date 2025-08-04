@@ -1,0 +1,59 @@
+.navbar{
+    margin: 0%;
+    padding: 0%;
+    height: 12%;
+    height: auto;
+}
+#call{ 
+    background-color: #373636;
+    display: flex;
+    justify-content: end;
+    padding-right: 5%;
+    height: 100%;
+}
+#btn_call{
+    border-radius: 15px;
+    width: 33%;
+    background-color: #3A643B;
+    font: Dm Sans;
+    color: white;
+    border: none;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+#p_call{
+    width: 33%;
+    font: Dm Sans;
+    color: white;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.sec1{
+    display: flex;
+    
+    justify-content: center;
+    
+    background-color: #fff7e2;
+    align-items: center;
+}
+
+
+
+.sec2{
+    display: flex;
+    background-color: #fff7e2;
+    
+    align-items: center;
+
+    
+}
+
+.opt{
+    background:transparent;
+    border: none;
+    fonT: Dm Sans;
+    color: #3A643B;
+    font-weight: bold;
+}

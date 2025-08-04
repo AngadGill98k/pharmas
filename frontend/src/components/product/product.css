@@ -1,0 +1,48 @@
+.product_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+}
+.product_wrapper{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: auto;
+}
+.quantity{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.Secondary_b{
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    justify-content: space-between;    
+}
+.Secondary_b_list{
+    display: flex;
+    flex-direction: row;
+    width: 30%;
+    text-align: center;
+}
+.Dosage{
+    list-style: none;
+    margin-top: 0px;
+    padding: 0%;
+}
+.primary{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+     flex-direction: column;
+}
+.primary_list{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
