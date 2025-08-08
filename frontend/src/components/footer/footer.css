@@ -1,6 +1,8 @@
 .download{
 background-color: #FFF7E2;
-display: flex
+display: flex;
+margin-top: 10%;
+border-top: 1px solid #e0d9c4; 
 }
 .details{
     width: 50%

@@ -55,40 +55,42 @@ const Third = ({ product, step, setStep }) => {
 
   return (
     <>
-      <div className='container'>
+      <div className=''>
         <div>
           <p>Ayurvedic Properties</p>
-          <input ref={rasa} type='text' placeholder='Rasa' />
-          <input ref={veerya} type='text' placeholder='Veerya' />
-          <input ref={guna} type='text' placeholder='Guna' />
-          <input ref={vipaka} type='text' placeholder='Vipaka' />
+          <input style={{ height: "40px", border: "2px solid #ccc", width: "45%", borderRadius: "13px", marginLeft: "2%",marginBottom:"1%" }} ref={rasa} type='text' placeholder='Rasa' />
+          <input style={{ height: "40px", border: "2px solid #ccc", width: "45%", borderRadius: "13px", marginLeft: "2%" }} ref={veerya} type='text' placeholder='Veerya' />
+          <input style={{ height: "40px", border: "2px solid #ccc", width: "45%", borderRadius: "13px", marginLeft: "2%" }} ref={guna} type='text' placeholder='Guna' />
+          <input style={{ height: "40px", border: "2px solid #ccc", width: "45%", borderRadius: "13px", marginLeft: "2%" }} ref={vipaka} type='text' placeholder='Vipaka' />
         </div>
 
         <div>
           <p>Important Formulations</p>
           {Formulations.current.map((ref, index) => (
-            <div key={index}>
-              <input ref={ref.text} type='text' placeholder={`Formulation ${index + 1}`} />
-              <input ref={ref.image} type='file' />
+                        <div style={{display:"flex",boxSizing:"border-box",paddingBottom:"1%",alignItems:"center"}} key={index}>
+              <input style={{width:"20%" }} ref={ref.image} type='file' />
+              <input style={{ height: "40px", border: "2px solid #ccc", width: "80%", borderRadius: "13px", marginLeft: "2%" }} ref={ref.text} type='text' placeholder={`Formulation ${index + 1}`} />
             </div>
           ))}
-          <button onClick={handleAdd}>Add Formulation</button>
+          <button style={{background:"none",border:"none",fontWeight:"bold",fontSize:"14px",cursor:"pointer",color:"#3A643C"}} onClick={handleAdd}>Add Formulation</button>
         </div>
 
         <div>
           <p>Therapeutic Uses</p>
           {Therapeutic.current.map((ref, index) => (
-            <div key={index}>
-              <input ref={ref.text} type='text' placeholder={`Therapeutic Use ${index + 1}`} />
-              <input ref={ref.image} type='file' />
+                        <div style={{display:"flex",boxSizing:"border-box",paddingBottom:"1%",alignItems:"center"}} key={index}>
+                            <input style={{width:"20%" }} ref={ref.image} type='file' />
+
+              <input style={{ height: "40px", border: "2px solid #ccc", width: "80%", borderRadius: "13px", marginLeft: "2%" }} ref={ref.text} type='text' placeholder={`Therapeutic Use ${index + 1}`} />
             </div>
           ))}
-          <button onClick={handleUses}>Add Use</button>
+          <button style={{background:"none",border:"none",fontWeight:"bold",fontSize:"14px",cursor:"pointer",color:"#3A643C"}} onClick={handleUses}>Add Use</button>
         </div>
 
-        <br />
-        {step !== 5 && <button onClick={handleNext}>Next</button>}
-        {step !== 1 && <button onClick={handleBack}>Back</button>}
+        <div style={{display:"flex",width:"100%",gap:"20px",justifyContent:"center",marginTop:"20px"}}>
+                {step !== 5 && <button style={{width:"20%",backgroundColor:"#3A643B",color:"white",height:"40px",borderRadius:"10px",border:"none"}} onClick={handleNext}>Next</button>}
+                {step !== 1 && <button style={{width:"20%",backgroundColor:"#3A643B",color:"white",height:"40px",borderRadius:"10px",border:"none"}} onClick={handleBack}>Back</button>}
+                </div>
       </div>
     </>
   );

@@ -1,0 +1,555 @@
+/* General styles for both modals */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'DM Sans', sans-serif;
+}
+
+/* Modal Overlay for the category modal */
+.category-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Shared modal styles */
+.ask-modal, .category-modal {
+    background: #ffffff;
+    border-radius: 16px;
+    width: 666px;
+    padding: 24px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+/* Modal Header - Shared */
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.modal-header h2 {
+    font-size: 18px;
+    font-style: medium;
+    font-weight: 500;
+    line-height: 19.77px;
+    letter-spacing: 0;
+    color: #000000;
+}
+
+.modal-header p {
+    font-size: 14px;
+    font-weight: 400;
+    color: #666;
+    margin-top: 4px;
+}
+
+.close-btn {
+    font-size: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-weight: 300;
+    color: #333;
+}
+
+.ask-modal {
+    min-height: 200px;
+}
+
+.user-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.user-row img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.user-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: #2e7d32;
+}
+
+.privacy-select {
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 12px;
+    background-color: #f7f7f7;
+    cursor: pointer;
+}
+
+.ask-btn {
+    margin-left: auto;
+    height: 48px;
+    width: 100px;
+    background-color: #3a643b;
+    color: white;
+    padding: 12px 16px;
+    border-radius: 12px;
+    border: none;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.input-group {
+    margin-bottom: 24px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #1a1a1a;
+}
+
+.required {
+    color: #e53935;
+}
+
+.input-with-limit {
+    position: relative;
+}
+
+.simple-input {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 14px;
+    border: 1px solid #e6e6e6;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+.simple-input::placeholder {
+    color: #b3b3b3;
+}
+
+textarea.simple-input {
+    resize: none;
+    padding-bottom: 30px;
+}
+
+.word-limit {
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+    font-size: 12px;
+    color: #999;
+}
+
+.input-with-icons {
+    position: relative;
+}
+
+.input-with-icons .simple-input {
+    padding-right: 120px;
+}
+
+.attachment-icons {
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    transform: translateY(-50%);
+    display: flex;
+    gap: 12px;
+}
+
+.attachment-icons img {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+}
+
+.attachment-icons img:hover {
+    opacity: 1;
+}
+
+.add-description-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    color: #3a643b;
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: -16px;
+}
+
+.add-description-link img {
+    width: 20px;
+    height: 20px;
+}
+
+/* Second Modal: Select Category */
+/* Modal Overlay for the category modal */
+.category-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Shared modal styles */
+.ask-modal, .category-modal {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+    max-width: 666px;
+    width: 90%;
+}
+
+/* Modal Header - Shared */
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.modal-header h2 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+.modal-header p {
+    font-size: 14px;
+    font-weight: 400;
+    color: #666;
+    margin-top: 4px;
+}
+
+.close-btn {
+    font-size: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-weight: 300;
+    color: #333;
+}
+
+/* First Modal: Ask Question */
+.ask-modal {
+    min-height: 200px; /* Adjust height dynamically based on content */
+}
+
+.user-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.user-row img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.user-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: #2e7d32;
+}
+
+.privacy-select {
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 12px;
+    background-color: #f7f7f7;
+    cursor: pointer;
+}
+
+.ask-btn {
+    margin-left: auto;
+    height: 48px;
+    width: 100px;
+    background-color: #3a643b;
+    color: white;
+    padding: 12px 16px;
+    border-radius: 12px;
+    border: none;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.input-group {
+    margin-bottom: 24px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #1a1a1a;
+}
+
+.required {
+    color: #e53935;
+}
+
+.input-with-limit {
+    position: relative;
+}
+
+.simple-input {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 14px;
+    border: 1px solid #e6e6e6;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+.simple-input::placeholder {
+    color: #b3b3b3;
+}
+
+textarea.simple-input {
+    resize: none;
+    padding-bottom: 30px;
+}
+
+.word-limit {
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+    font-size: 12px;
+    color: #999;
+}
+
+.input-with-icons {
+    position: relative;
+}
+
+.input-with-icons .simple-input {
+    padding-right: 120px;
+}
+
+.attachment-icons {
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    transform: translateY(-50%);
+    display: flex;
+    gap: 12px;
+}
+
+.attachment-icons img {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+}
+
+.attachment-icons img:hover {
+    opacity: 1;
+}
+
+.add-description-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    color: #3a643b;
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: -16px;
+}
+
+.add-description-link img {
+    width: 20px;
+    height: 20px;
+}
+
+
+/* Second Modal: Select Category */
+.category-modal {
+    max-height: 80vh;
+    overflow-y: auto;
+    padding: 20px;
+    width: 630px;
+}
+
+.category-modal .modal-header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.category-modal .header-text {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    flex-grow: 1; /* Allows header to take up space and center text */
+}
+
+.category-modal .header-text h2 {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 20px;
+    color: #2e2f2e;
+}
+
+.category-modal .header-text p {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    color: #646665;
+}
+
+.category-modal .close-btn {
+    width: 24px;
+    height: 24px;
+}
+
+.search-bar {
+    position: relative;
+    height: 56px;
+    width: 100%;
+    padding: 10px 22px;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+
+.search-bar img {
+    position: absolute;
+    top: 50%;
+    left: 35px;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 12px 16px 12px 40px;
+    border: 1px solid #e6e6e6;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.category-button {
+    background-color: #f7f7f7;
+    color: #666;
+    border: 1px solid #e6e6e6;
+    border-radius: 8px;
+    padding: 10px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.category-button:hover {
+    background-color: #f0f0f0;
+}
+
+.category-button.selected {
+    background-color: #e8f5e9;
+    border-color: #3a643b;
+    color: #3a643b;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 7px;
+}
+
+.skip-btn {
+    size: small;
+    background: #ffffff;
+    width: 241px;
+    height: 48px;
+    border-radius: 12px;
+    color: black;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 12px 16px;
+    border: 1px solid #e6e6e6;
+}
+
+.add-concern-btn {
+    size: small;
+    background-color: #3a643b;
+    width: 241px;
+    height: 48px;
+    color: white;
+    padding: 12px 16px;
+    border-radius: 12px;
+    border: none;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/* Toast Notification */
+.toast-notification {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    z-index: 1001;
+    font-size: 14px;
+    white-space: nowrap;
+}

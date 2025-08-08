@@ -49,27 +49,44 @@ console.log(product);
   };
 
   return (
-    <div className="container">
-      <p>Step 4: FAQ & Additional Display</p>
+    <div style={{ marginTop: '40px' }}>
+     
 
       {/* FAQ Section */}
       <div>
         <p>FAQs</p>
-        <ul>
+        <ul style={{ listStyle: 'none'}}>
           {faqRefs.current.map((refSet, index) => (
             <li key={index}>
-              <input ref={refSet.q} type="text" placeholder="Question" />
-              <input ref={refSet.a} type="text" placeholder="Answer" />
+              <div style={{ display: 'flex', gap: '10px', }}>
+              <input ref={refSet.q} style={{
+                  width:"30%",
+                  height: '40px',
+                  border: '2px solid #ccc',
+                  borderRadius: '13px',
+                  paddingLeft: '10px',
+                  marginBottom: "10px"
+                }} type="text" placeholder="Question" />
+              <input ref={refSet.a} style={{
+                  width:"30%",
+                  height: '40px',
+                  border: '2px solid #ccc',
+                  borderRadius: '13px',
+                  paddingLeft: '10px',
+                  marginBottom: "10px"
+                }} type="text" placeholder="Answer" />
+              <button style={{background:"none", border:"none"}} onClick={() => faqRefs.current.splice(index, 1)}>X</button>
+              </div>
             </li>
           ))}
         </ul>
-        <button onClick={handleAddFAQ}>Add FAQ</button>
+        <button style={{background:"none",border:"none",fontWeight:"bold",fontSize:"14px",cursor:"pointer",color:"#3A643C"}}  onClick={handleAddFAQ}>Add FAQ</button>
       </div>
 
       {/* Additional Product Display */}
       <div>
         <p>Additional Product Display</p>
-        <ul>
+        <ul >
           {productDisplayRefs.current.map((refSet, index) => (
             <li key={index}>
               <input ref={refSet.img} type="file" accept="image/*" />
@@ -77,12 +94,13 @@ console.log(product);
             </li>
           ))}
         </ul>
-        <button onClick={handleAddProductDisplay}>Add Product</button>
+        <button style={{background:"none",border:"none",fontWeight:"bold",fontSize:"14px",cursor:"pointer",color:"#3A643C"}}  onClick={handleAddProductDisplay}>Add Product</button>
       </div>
 
-      {/* Navigation Buttons */}
-      {step !== 5 && <button onClick={handleNext}>Next</button>}
-      {step !== 1 && <button onClick={handleBack}>Back</button>}
+      <div style={{display:"flex",width:"100%",gap:"20px",justifyContent:"center",marginTop:"20px"}}>
+                {step !== 5 && <button style={{width:"20%",backgroundColor:"#3A643B",color:"white",height:"40px",borderRadius:"10px",border:"none"}} onClick={handleNext}>Next</button>}
+                {step !== 1 && <button style={{width:"20%",backgroundColor:"#3A643B",color:"white",height:"40px",borderRadius:"10px",border:"none"}} onClick={handleBack}>Back</button>}
+                </div>
     </div>
   );
 };

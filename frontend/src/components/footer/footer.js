@@ -29,10 +29,11 @@ const Footer = () => {
   className="footer"
   style={{
     backgroundImage: "url('/images/17646339f71940f72e73b1a9d9e085a58808153f.png')",
-    backgroundSize: "cover",
+    backgroundSize:"contain",
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center",
     height: "300px",
+    width:"100%"
   }}
 ></div>
     </>

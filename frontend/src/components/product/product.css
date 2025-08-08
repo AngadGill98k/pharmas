@@ -4,12 +4,19 @@
     align-items: center;
     width: 100%;
     height: auto;
+    background-color: #FFF7E2;
+    padding:20px;
+
 }
 .product_wrapper{
     display: flex;
     flex-direction: column;
     width: 50%;
     height: auto;
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    
 }
 .quantity{
     display: flex;
@@ -21,14 +28,21 @@
     display: flex;
     list-style: none;
     flex-wrap: wrap;
-    justify-content: space-between;    
+    justify-content: space-evenly; 
+    padding: 0%;
+    
 }
 .Secondary_b_list{
     display: flex;
-    flex-direction: row;
-    width: 30%;
+    flex-direction: column;
+    justify-content: center;
+    
+    height: 100%;
+    width: 100%;
     text-align: center;
-}
+    
+    
+    }
 .Dosage{
     list-style: none;
     margin-top: 0px;
@@ -38,11 +52,35 @@
     display: flex;
     width: 100%;
     flex-wrap: wrap;
-     flex-direction: column;
+    flex-direction: column;
+    padding: 0%;
+    
+    box-sizing: border-box;
 }
 .primary_list{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 100%;
+    width: 100%;
+}
+.faq{
+    background-color:#FDEAD2 ;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    padding: 10px;
+}
+.catt{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.categoriess{
+    margin-top: 2%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
 }

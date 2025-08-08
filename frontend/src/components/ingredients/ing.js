@@ -1,81 +1,99 @@
-import React from 'react'
-import "./ing.css"
-import { useLocation } from 'react-router-dom'
+import React from 'react';
+import './ing.css';
+import { useLocation } from 'react-router-dom';
+import Navbar from '../nav/Navbar';
+import Footer from '../footer/footer';
 
 const Ing = () => {
   const location = useLocation();
   const ingredient = location.state;
 
+  console.log(ingredient);
+
   return (
     <>
-      <div className='ing_container'>
-        <div className='ing_wrapper'>
-          <div style={{ display: "flex", flexDirection: "row", alignItems: 'center', justifyContent: 'space-between' }}>
-            <h4>General Information</h4>
-            <img src="" alt="herb" />
+    <Navbar/>
+      <div className="ing_container">
+        <div className="ing_wrapper">
+          <div style={{ display: 'flex', flexDirection: 'column' }}>
+            <h2>General Information</h2>
+            <img
+              src={`http://localhost:3001/uploads/${ingredient.image[0]}`}
+              alt="herb"
+            />
           </div>
 
-          <h3>Citraka</h3>
+          
 
-          <h4>Description</h4>
-          <p>{ingredient.description}</p>
-
-          <h3>Why Chitrak</h3>
+          <h2>Benefits</h2>
           <ul>
-            {ingredient.chitrak?.map((value, index) => (
-              <li key={`chitrak-${index}`}>{value}</li>
+            {ingredient?.benefits?.map((benefit, index) => (
+              <li key={`benefit-${index}`}>
+                <p>{benefit.text}</p>
+                <img
+                  src={`http://localhost:3001/uploads/${benefit.image}`}
+                  alt="benefit"
+                  style={{ width: '100px' }}
+                />
+              </li>
             ))}
           </ul>
 
-          <h3>Prakriti Impact</h3>
+          <h2>Ayurvedic Properties</h2>
+          <p>Guna: {ingredient.guna}</p>
+          <p>Rasa: {ingredient.rasa}</p>
+          <p>Vipaka: {ingredient.vipaka}</p>
+          <p>Veerya: {ingredient.veerya}</p>
+          <p>Vata: {ingredient.vata}</p>
+          <p>Kapha: {ingredient.kapha}</p>
+
+          <h2>Therapeutic Uses</h2>
           <ul>
-            {ingredient.prakati?.map((value, index) => (
-              <li key={`prakati-${index}`}>{value}</li>
+            {ingredient?.therapeutic_uses?.map((use, index) => (
+              <li key={`use-${index}`}>
+                <p>{use.text}</p>
+                <img
+                  src={`http://localhost:3001/uploads/${use.image}`}
+                  alt="therapeutic"
+                  style={{ width: '100px' }}
+                />
+              </li>
             ))}
           </ul>
 
-          <h3>Benefits</h3>
+          <h2>Important Formulations</h2>
           <ul>
-            {ingredient.benefits?.map((value, index) => (
-              <li key={`benefit-${index}`}>{value}</li>
+            {ingredient?.formulations?.map((formulation, index) => (
+              <li key={`formulation-${index}`}>
+                <p>{formulation.text}</p>
+                <img
+                  src={`http://localhost:3001/uploads/${formulation.image}`}
+                  alt="formulation"
+                  style={{ width: '100px' }}
+                />
+              </li>
             ))}
           </ul>
 
-          <h3>Ayurvedic Properties</h3>
+          <h2>Plant Parts and Its Purpose</h2>
           <ul>
-            {ingredient.ayurvedic_properties?.map((value, index) => (
-              <li key={`property-${index}`}>{value}</li>
+            {ingredient?.plantParts?.map((part, index) => (
+              <li key={`part-${index}`}>
+                <strong>{part.part}:</strong> {part.description}
+              </li>
             ))}
           </ul>
 
-          <h3>Therapeutic Uses</h3>
-          <ul>
-            {ingredient.therapeutic_uses?.map((value, index) => (
-              <li key={`therapeutic-${index}`}>{value}</li>
-            ))}
-          </ul>
+          <h2>Best Combined With</h2>
+          <p>{ingredient.combinedWith}</p>
 
-          <h3>Important Formulations</h3>
-          <ul>
-            {ingredient.important_formulations?.map((value, index) => (
-              <li key={`formulation-${index}`}>{value}</li>
-            ))}
-          </ul>
-
-          <h3>Plant Parts and Its Purpose</h3>
-          <ul>
-            {ingredient.plant_parts?.map((value, index) => (
-              <li key={`part-${index}`}>{value}</li>
-            ))}
-          </ul>
-            <h3>Best combined with</h3>
-            <p></p>
-            <h3>Geographical Locations</h3>
-            <p></p>
+          <h2>Geographical Locations</h2>
+          <p>{ingredient.geographicalLocations}</p>
         </div>
       </div>
+            <Footer/>
     </>
   );
-}
+};
 
 export default Ing;

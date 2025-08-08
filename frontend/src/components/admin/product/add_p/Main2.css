@@ -3,7 +3,9 @@
   align-items: center;
   justify-content: center;
   margin: 20px 0;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
+  width: 100%;
+ 
 }
 
 .step-item {
@@ -30,6 +32,7 @@
   border-color: #2e7d32;
   color: #2e7d32;
   font-weight: bold;
+  
 }
 
 .step-circle.completed {

@@ -18,19 +18,16 @@ import Main from './components/admin/ingridients/add_i/main';
 import Main2 from './components/admin/product/add_p/Main2';
 import Login from './components/login/Login';
 import Product from './components/product/Product';
+import Ing from './components/ingredients/ing';
+import Admin from './components/admin/admin';
+import Forums from './components/forums/forums';
+import User from './components/user/user';
+import Cart from './components/cart/cart';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const router=createBrowserRouter([
   {
     path:"/",
     element:<Login/>
-  },
-   {
-    path:"/add_p",
-    element:<Main2/>
-  },
-  {
-    path:"/add_i",
-    element:<Main/>
   },
   {
     path:"/home",
@@ -39,12 +36,32 @@ const router=createBrowserRouter([
   {
     path:"/product",
     element:<Product/>
+  },
+  {
+    path:"/ingredient",
+    element:<Ing/>
+  },
+  {
+    path:"/admin",
+    element:<Admin/>
+  },
+  {
+    path:"/forums",
+    element:<Forums/>
+  },
+  {
+    path:"/user",
+    element:<User/>
+  },
+  {
+    path:"/cart",
+    element:<Cart/>
   }
 ])
 root.render(
-  <React.StrictMode>
+ 
      <RouterProvider router={router} />
-  </React.StrictMode>
+  
 );
 
 // If you want to start measuring performance in your app, pass a function

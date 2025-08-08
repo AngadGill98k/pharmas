@@ -30,7 +30,7 @@ function App() {
    <Search/>
    <Store/>
    <Footer/> 
-   <Ing/>
+   {/* <Ing/> */}
     </>
   );
 }

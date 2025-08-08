@@ -1,4 +1,9 @@
 const mongoose=require('mongoose')
+const qn_schema=new mongoose.Schema({
+    quantity:Number,
+    price:Number,
+    month:Number,
+})
 const userschema=new mongoose.Schema({
     name:String,
     mail:String,
@@ -7,7 +12,8 @@ const userschema=new mongoose.Schema({
     ingridients:[String], 
     temporary:[],
     post:[String],
-    bookmarks:[String]
+    bookmarks:[String],
+    cart:[{product:String,quantity:Number}],
 })
 const User=mongoose.model('User',userschema)
 module.exports=User

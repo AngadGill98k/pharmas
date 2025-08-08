@@ -1,0 +1,412 @@
+/* forums.css */
+
+.forums-container {
+    padding: 0 100px;
+    background-color: #fcfcfc;
+}
+
+.forums-header-img {
+    width: 100%;
+    margin-bottom: -80px;
+    z-index: 1;
+    position: relative;
+}
+
+.main-content {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+.forum-wrapper {
+    width: 699px;
+    height: auto;
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    padding: 24px;
+}
+
+.forum-head-buttons {
+    display: flex;
+    justify-content: flex-start;
+    border-bottom: 1px solid #e6e6e6;
+    margin-bottom: 16px;
+}
+
+.forum-head-buttons button {
+    background: none;
+    border: none;
+    padding: 12px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #646665;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.forum-head-buttons button.active {
+    color: #3a643b;
+    font-weight: 600;
+    border-bottom: 2px solid #3a643b;
+}
+
+.forum-profile-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 0;
+    border-bottom: 1px solid #e6e6e6;
+    margin-bottom: 24px;
+}
+
+.forum-profile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.forum-profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.forum-profile .name {
+    font-size: 16px;
+    font-weight: 600;
+    color: #3a643b;
+}
+
+.ask-question-btn {
+    background-color: #3a643b;
+    size: small;
+    height: 40px;
+    width: 210px;
+    color: white;
+    padding: 12px 16px 12px 16px;
+    border-radius: 12px;
+    border: none;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.search-input-group {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 16px;
+    gap: 12px;
+}
+
+.search-bar-forum {
+    position: relative;
+    flex-grow: 1;
+}
+
+.search-bar-forum img {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+}
+
+.search-bar-forum input {
+    width: 100%;
+    padding: 12px 16px 12px 40px;
+    border: 1px solid #e6e6e6;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.questions-list {
+    width: 100%;
+}
+
+.question-card {
+    border-bottom: 1px solid #e6e6e6;
+    padding: 24px 0;
+}
+
+.question-card:last-child {
+    border-bottom: none;
+}
+
+.question-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.question-header img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.user-info {
+    flex-grow: 1;
+}
+
+.user-info .name {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+.user-info .time {
+    font-size: 12px;
+    color: #999;
+}
+
+.question-options-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.question-text h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+}
+
+.question-text p {
+    font-size: 14px;
+    color: #646665;
+    margin-bottom: 12px;
+}
+
+.replies-section {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 52px;
+}
+
+.view-replies-link {
+    font-size: 14px;
+    font-weight: 500;
+    color: #3a643b;
+    margin-bottom: 12px;
+    cursor: pointer;
+}
+
+.reply-card {
+    display: flex;
+    gap: 11px;
+    height: auto;
+    width: 538px;
+    background-color: rgb(217, 245, 217);
+    border-radius: 8px;
+    padding: 16px;
+    /* Corrected properties to ensure left alignment */
+    margin-left: 0 !important;
+    margin-right: auto !important;
+    flex-direction: column; /* Stacks the content vertically */
+    align-items: flex-start; /* Aligns all children to the left */
+}
+
+.doctor-info {
+    display: flex; /* Makes the doctor info a flex container */
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 8px; /* Adds space between the profile and the answer */
+}
+
+.doctor-info img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.doctor-details {
+    flex-grow: 1;
+}
+
+.doctor-details .name {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+.doctor-details .title {
+    font-size: 12px;
+    color: #646665;
+}
+
+.doctor-answer {
+    font-size: 14px;
+    color: #333;
+    margin-top: 8px;
+}
+
+/* This is the new style for the footer inside the reply card */
+.reply-footer-actions {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-top: 12px;
+}
+
+.reply-footer-actions span {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 14px;
+    color: #646665;
+    cursor: pointer;
+}
+
+.reply-footer-actions img {
+    width: 16px;
+    height: 16px;
+}
+
+/* The old question-footer is now removed from the Forums.js file */
+/* The following styles are kept in case they are used elsewhere, but are no longer used for the reply box */
+.question-footer {
+    display: flex;
+    justify-content: flex-start;
+    padding-top: 12px;
+}
+
+.question-footer .actions {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.question-footer .actions span {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 14px;
+    color: #646665;
+    cursor: pointer;
+}
+
+.question-footer .actions img {
+    width: 16px;
+    height: 16px;
+}
+
+.load-more-btn {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    color: #3a643b;
+    margin-top: 24px;
+    cursor: pointer;
+}
+
+.modal_backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(30, 30, 30, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.no-questions-found {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f0f2f5;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.no-questions-found p {
+    font-size: 16px;
+    color: #666;
+}
+
+.sort-container {
+    position: relative;
+    z-index: 20;
+}
+
+.sort-btn {
+    background: #ffffff;
+    border: 1px solid #e6e6e6;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #646665;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.sort-btn-icon {
+    width: 20px;
+    height: 20px;
+}
+.sort-btn img{
+    width: 25px;
+    height: 25px;
+}
+
+.sort-btn .dropdown-icon {
+    width: 12px;
+    height: 12px;
+    margin-left: 8px;
+}
+
+.sort-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #ffffff;
+    border: 1px solid #e6e6e6;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    margin-top: 8px;
+    min-width: 180px;
+    padding: 8px 0;
+}
+
+.sort-dropdown div {
+    padding: 10px 16px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #646665;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.sort-dropdown div img {
+    width: 16px;
+    height: 16px;
+}
+
+.sort-dropdown div:hover {
+    background-color: #f5f5f5;
+}
+
+.sort-dropdown div.active-sort-item {
+    font-weight: 600;
+    color: #3a643b;
+    background-color: #eaf1e9;
+}

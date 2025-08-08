@@ -2,18 +2,29 @@
     display: flex;
     justify-content: center;
     align-items: center;
-flex-direction: column;
-    
+    flex-direction: column;
     width: 100%;
-    
+    background-color: white;
+}
+.faq_search{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
 }
 .forum_container{
     height: auto;
     width: 50%;
 }
+.faq_list{
+    margin-top: 10%;
+}
 .temp{
     width: 50%;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+    border: 1px solid #e6e6e6;
+    margin-top: 20px;
+    box-sizing: border-box;
+    padding: 10px;
+    border-radius: 10px;
 }
  .wrapper{
     width: 100%;
@@ -22,21 +33,25 @@ flex-direction: column;
 .active{
     background: none;
     border: none;
-    height: 2rem;
+    height: 3rem;
     width: 50%;
 }
 .profile{
+  margin-top: 20px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     height: auto;
     width: 100%;
+   
+    border-bottom: 1px solid #e6e6e6;
 }
 .name{
     display: flex;
     align-items: center;
     width: 50%;
     height: 2rem;
+    gap: 6%;
 }
 .faq{
     width: 100%;
@@ -75,11 +90,35 @@ flex-direction: column;
   cursor: pointer;
 }
 
-/*
+
 .head{
     display: flex;
     justify-content: center;
     height: auto;   
+    border-bottom: 1px solid #e6e6e6;
+    margin-bottom: 10px;
 }
 
-*/
+/* Ensure the search area is the positioning context */
+.faq_search {
+  position: relative; /* new: allow absolute dropdown relative to this container */
+}
+
+/* Dropdown card */
+.sort-dropdown {
+  position: absolute;
+  top: 100%;       /* directly below the button */
+  left: 0;         /* align with the left edge of the button */
+  margin-top: 4px; /* small gap */
+  min-width: 150px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  z-index: 1000;
+  padding: 8px 0;
+}
+
+/* Each option */
+.sort-item:hover {
+  background: rgba(58,100,59,0.06); /* subtle green hover */
+}

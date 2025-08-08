@@ -46,7 +46,8 @@ const productschema=new mongoose.Schema({
     dosage:[dosage],
     faqs:[faqs],
     title:String,////neeed to do this
-    additionalDisplay:[additionalDisplay]
+    additionalDisplay:[additionalDisplay],
+    status:{type:Boolean,default:true},
 
 })
 const Product=mongoose.model('product',productschema)

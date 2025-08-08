@@ -27,8 +27,9 @@ const inchema=new mongoose.Schema({
     plantParts:[plantPartschema],
     description:String,
     image:[String],
-    combinedWith:[String],
-    geographicalLocations:[String],
+    combinedWith:String,
+    geographicalLocations:String,
+    status:{type:Boolean,default:true},
     
 })
 const Ingridients=mongoose.model('Ingridients',inchema)

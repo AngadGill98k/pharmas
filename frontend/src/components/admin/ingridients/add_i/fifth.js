@@ -101,7 +101,7 @@ function getCookie(name) {
 
   return (
     <>
-      <div className='container'>
+      <div className=''>
         <h2>Review Your Product</h2>
         <pre style={{ 
           background: '#111', 
@@ -114,33 +114,11 @@ function getCookie(name) {
           {JSON.stringify(product, null, 2)}
         </pre>
 
-        <button onClick={handleSubmit} style={{
-          marginTop: '20px',
-          padding: '10px 20px',
-          fontSize: '16px',
-          backgroundColor: '#4CAF50',
-          color: 'white',
-          border: 'none',
-          borderRadius: '4px',
-          cursor: 'pointer'
-        }}>
-          Submit
-        </button>
-
-        {step !== 1 && (
-          <button onClick={handleBack} style={{
-            marginLeft: '10px',
-            padding: '10px 20px',
-            fontSize: '16px',
-            backgroundColor: '#888',
-            color: 'white',
-            border: 'none',
-            borderRadius: '4px',
-            cursor: 'pointer'
-          }}>
-            Back
-          </button>
-        )}
+       <div style={{display:"flex",width:"100%",gap:"20px",justifyContent:"center",marginTop:"20px"}}>
+                {step === 5 && <button style={{width:"20%",backgroundColor:"#3A643B",color:"white",height:"40px",borderRadius:"10px",border:"none"}} onClick={handleSubmit}>Submit</button>}
+                {step !== 1 && <button style={{width:"20%",backgroundColor:"#3A643B",color:"white",height:"40px",borderRadius:"10px",border:"none"}} onClick={handleBack}>Back</button>}
+                </div>
+        
       </div>
     </>
   );

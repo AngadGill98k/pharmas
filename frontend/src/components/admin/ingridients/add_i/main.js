@@ -5,36 +5,62 @@ import Second from './second';
 import Third from './third';
 import Fourth from './fourth';
 import Fifth from './fifth';
+import './main.css'; // Ensure this file contains your stepper styles
 
 const Main = () => {
     let navigation = useNavigate();
     let product = useRef({});
     let [step, setStep] = useState(1);
 
-    const handleBack = () => {
-        if (step === 1) return;
-        setStep(prev => prev - 1);
-        console.log(step);
+    const steps = [
+        'General Information',
+        'Benefits',
+        'Properties',
+        'Other',
+        'Overview'
+    ];
+
+    const Stepper = ({ currentStep }) => {
+        return (
+            <div className="stepper">
+                {steps.map((label, index) => {
+                    const stepNumber = index + 1;
+                    const isCompleted = currentStep > stepNumber;
+                    const isActive = currentStep === stepNumber;
+
+                    return (
+                        <div className="step-item" key={index}>
+                            <div
+                                className={`step-circle ${
+                                    isCompleted ? 'completed' : isActive ? 'active' : ''
+                                }`}
+                            >
+                                {isCompleted ? '✔' : `0${stepNumber}`}
+                            </div>
+                            <div className="step-label">{label}</div>
+                            {index !== steps.length - 1 && (
+                                <div
+                                    className={`step-line ${
+                                        currentStep > stepNumber ? 'line-filled' : ''
+                                    }`}
+                                ></div>
+                            )}
+                        </div>
+                    );
+                })}
+            </div>
+        );
     };
 
-    const handleNext = () => {
-        if (step === 5) return;
-        setStep(prev => prev + 1);
-        console.log(step);
-    };
-
-    const handleSubmit = () => {
-        // Submission logic will go here
-    };
     useEffect(() => {
-      
-    console.log(product);
-    
-    }, [product])
-    
+        console.log(product);
+    }, [product]);
+
     return (
         <>
-            <div className="container">
+            <Stepper currentStep={step} />
+
+            <div className="">
                 {step === 1 && <Add product={product} step={step} setStep={setStep} />}
                 {step === 2 && <Second product={product} step={step} setStep={setStep} />}
                 {step === 3 && <Third product={product} step={step} setStep={setStep} />}

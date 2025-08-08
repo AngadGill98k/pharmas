@@ -4,6 +4,7 @@ import List from './product/product_list/list';
 import List2 from './ingridients/i_list/list';
 import Main from './ingridients/add_i/main';
 import Main2 from './product/add_p/Main2';
+import Navbar from '../nav/Navbar';
 const Admin = () => {
   const [activeIndex, setActiveIndex] = useState(null);
   let[label,setlabel]=useState()
@@ -62,18 +63,18 @@ const handleChildClick = (parent, child) => {
 
 
   return (
-    <>
-
+    < >
+      <Navbar/>
       <div className='admin_container'>
         <div className='admin_nav'>
           <div className='admin_head'>
-            <button style={{border:'none' ,borderRadius:'30px',height:'40px',backgroundColor:'#D9D9D9'}} className='back'>Back</button>
+            {/* <button style={{border:'none' ,borderRadius:'30px',height:'40px',backgroundColor:'#D9D9D9'}} className='back'>Back</button> */}
             <img src='/images/Amrutam Green Png Logo V3-02 2.png' alt='logo' />
             <h2>A M R U T A M</h2>
           </div>
           <div className='admin_profile'>
             <h4 style={{font:'#3A643B'}}>Name</h4>
-            <img src={`http://localhost:3001/uploads/${''}`} alt='logo' />
+                                <img style={{}} src='./images/admin_logo.png'></img>
           </div>
         </div>
         <div className='admin_wrapper'>
@@ -82,16 +83,16 @@ const handleChildClick = (parent, child) => {
 
           <ul className='child'>
             {dashboard.map((item, index) => (
-              <div key={index}>
+              <div style={{margin:"20px"}} key={index}>
                 <li style={{ listStyleType: 'none',color:"#333548" }} onClick={() => handleClick(item.label,index)}>
                   {item.icon} {item.label}
                 </li>
                 {activeIndex === index && item.children && (
-                  <ul >
+                  <ul style={{padding:"0px"}} >
                     {item.children.map((child, i) => (
                       <li
                         key={i}
-                        style={{ listStyleType: 'none', }}
+                        style={{ listStyleType: 'none',margin:"20px" }}
                         onClick={() => handleChildClick(item, child)}
                       >
                         {child.label}
@@ -104,8 +105,10 @@ const handleChildClick = (parent, child) => {
           </ul>
         </div>
         <div className='admin_right'>
-            <h3>{label}</h3>
+            <h3 style={{color:" #2F522F"}}>{label}</h3>
+            <div className='admin_child'>
             {ChildComponent && ChildComponent}
+            </div>
         </div>
         </div>
       </div>

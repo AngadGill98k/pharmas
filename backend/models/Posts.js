@@ -11,8 +11,10 @@ const postschema = new mongoose.Schema({
   description:String,
   category:String,
   replies:[],
-  like:Number,
-  bookmarked:Number
+  like:[String],
+  bookmarked:Number,
+  date:{type: Date, default: Date.now},
 });
 
-module.exports = mongoose.model('Posts', postschema);
+const Posts= mongoose.model('Posts', postschema);
+module.exports = Posts

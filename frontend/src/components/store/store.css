@@ -5,6 +5,8 @@
     align-items: center;
     height: 20%;
     
+    flex-direction: row;
+    width: 100%;
 }
 .cat{
     margin-right: 5%;
@@ -13,5 +15,7 @@
 }
 .categories{
     display: flex;
-   
+    justify-content: space-between;
+    margin-top: 2%;
+
 }
